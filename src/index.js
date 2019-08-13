@@ -5,6 +5,7 @@ const port = 3000
 // require API_helper.js
 const api_helper = require('./API_helper')
 
+//Endpoint test
 app.get('/', (req, res) => res.send('Hola Mercado Libre!'))
 
 app.get('/getProduct/:product', (req, res) => {
@@ -18,6 +19,7 @@ app.get('/getProduct/:product', (req, res) => {
     })
 })
 
+//Endpoint para consulta de productos por Id
 app.get('/getProductById/:id', (req, res) => {
     var id = req.params.id;
     api_helper.make_API_call('https://api.mercadolibre.com/items/' + id)
@@ -29,6 +31,7 @@ app.get('/getProductById/:id', (req, res) => {
     })
 })
 
+//Endpoint para consulta de productos por Id y obtener su descripcion
 app.get('/getProductDescription/:id', (req, res) => {
     var id = req.params.id;
     api_helper.make_API_call('https://api.mercadolibre.com/items/' + id + '/description')

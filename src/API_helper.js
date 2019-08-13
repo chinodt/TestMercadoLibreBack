@@ -2,9 +2,7 @@ const request = require('request')
 
 module.exports = {
     /*
-    ** This method returns a promise
-    ** which gets resolved or rejected based
-    ** on the result from the API
+    ** Devuelve un objeto promise dependiendo del resultado del request
     */
     make_API_call : function(url){
         return new Promise((resolve, reject) => {
