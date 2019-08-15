@@ -6,6 +6,13 @@ const port = 3001
 // require API_helper.js
 const api_helper = require('./API_helper')
 
+/*
+Descripción:    Endpoint de NodeJS que emplea y expone métodos
+                del API de MercadoLibre
+Desarrollador:  David Tineo
+Fecha: 13/08/2019
+*/ 
+
 app.use(cors());
 //Endpoint test
 app.get('/', (req, res) => res.send('Hola Mercado Libre!'))
